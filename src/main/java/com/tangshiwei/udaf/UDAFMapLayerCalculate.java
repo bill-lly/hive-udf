@@ -2,6 +2,7 @@ package com.tangshiwei.udaf;
 
 
 import org.apache.hadoop.hive.ql.exec.UDAFEvaluator;
+import org.apache.hadoop.hive.ql.exec.UDAF;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,7 +12,7 @@ import java.util.Set;
 
 @org.apache.hadoop.hive.ql.exec.Description(name = "map_layer_calculate", value = "_FUNC_(arguments) Calculate layer " +
         "results based on point data.")
-public class UDAFMapLayerCalculate extends org.apache.hadoop.hive.ql.exec.UDAF {
+public class UDAFMapLayerCalculate extends UDAF {
     private static final Logger LOG = LoggerFactory.getLogger(UDAFMapLayerCalculate.class);
 
     public static class Evaluator implements UDAFEvaluator {

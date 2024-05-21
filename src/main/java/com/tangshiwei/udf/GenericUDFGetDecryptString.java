@@ -84,6 +84,7 @@ public class GenericUDFGetDecryptString extends GenericUDF {
         } catch (Exception e) {
             LOG.error("DESKeySpec initialization failed");
             e.printStackTrace();
+            return null;
         }
 
         BASE64Decoder decoder = new BASE64Decoder();
